@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: string;
+  [key: string]: any;
+}
+const props = Astro.props as any;
+const { text, class: cls, ...rest } = props;
+const className = cls ? `--font-cuerpo ${cls}` : `--font-cuerpo`;
+---
+<p class={className} {...rest}>{text}</p>
+
+<style>
+    p {font-family: var(--font-cuerpo); font-size: 18px; color: var(--color-texto); line-height: 1.6;}
+
+</style>

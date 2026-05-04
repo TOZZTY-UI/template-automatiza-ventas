@@ -1,0 +1,27 @@
+---
+interface Link {
+    href: string;
+    label: string;
+}
+interface Props {
+    links: Link[];
+}
+const { links } = Astro.props as Props;
+---
+
+<div
+    class="container mx-auto px-4 py-6 flex items-center justify-between center"
+>
+    <div class="hidden gap-8 lg:flex">
+        {
+            links.map((link) => (
+                <a
+                    href={link.href}
+                    class="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-all duration-300 ease-in-out disabled:cursor-not-allowed stroke-slate-500 px-2 text-black h-[38px] min-w-[38px] gap-2 cursor-pointer disabled:stroke-slate-400 disabled:text-slate-400 hover:opacity-80"
+                >
+                    <div>{link.label}</div>
+                </a>
+            ))
+        }
+    </div>
+</div>

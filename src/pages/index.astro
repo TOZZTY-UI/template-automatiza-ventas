@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import LaSolucion from "../components/LaSolucion.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="" description="">
+  <Header links={[
+    { href: "/feature", label: "Feature" },
+    { href: "/about", label: "About" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" }
+  ]} />
+  <main >
+    <Hero/>
+<LaSolucion/> 
+  </main>
+  <Footer />
+</BaseLayout>

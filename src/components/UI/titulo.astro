@@ -1,0 +1,19 @@
+---
+interface Props {
+    text: string;
+    [key: string]: any;
+}
+const props = Astro.props as any;
+const { text, class: cls, ...rest } = props;
+const className = cls ? cls : '';
+---
+
+<h1 class={className} {...rest}>
+    {text}
+</h1>
+
+
+<style>
+        h1 {font-family: var(--font-titulo); font-size: 40px; color: var(--color-texto); line-height: 1.2; font-weight: bold;}
+
+</style>

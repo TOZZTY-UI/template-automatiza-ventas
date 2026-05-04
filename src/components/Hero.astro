@@ -1,0 +1,62 @@
+---
+import Button from "../components/UI/button.astro";
+import Texto from "../components/UI/texto.astro";
+import Titulo from "../components/UI/titulo.astro";
+---
+
+<div class="container mx-auto px-64">
+    <div class="grid grid-cols-1 grid-cols-2 items-center gap-8">
+        <div class="md:pr-8">
+            <Titulo
+                text="Deja de perder clientes: automatiza tus ventas en 7 días"
+            />
+            <Texto
+                class="pt-4 pb-4"
+                text="Descube Implemento un sistema que capta leads, hace seguimiento automático y recibe pagos sin que tengas que mover un dedo. Tú céntrate en tu negocio. El sistema trabaja por ti."
+            />
+
+            <div class="flex items-start gap-4 flex-wrap">
+                <Button
+                    class="justify-self-auto"
+                    style="background-color: var(--color-boton); font-family: var(--font-titulo);"
+                    text="Quiero mi diagnóstico gratuito"
+                    href="/diagnostic"
+                />
+                <Button
+                    class="justify-self-auto"
+                    style="border: 2px solid var(--color-boton); background-color: var(--background-color); font-family: var(--font-titulo); color: var(--color-boton);"
+                    text="Ver cómo funciona"
+                    href="/how-it-works"
+                />
+            </div>
+        </div>
+
+          <div class="scale-150 drop-shadow-xl/50" >
+    <!-- 2. SVG con clipPath + imagen encima -->
+    <svg class="blob-svg" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="blobClip" >
+          <path d="M 76.39304076675842,0 C 73.05815380086355,18.48896235615395 67.45065617798804,17.49454864124806 57.3778704283843,33.12712893735513 C 47.30508467878055,48.7597092334622 50.446365375439505,47.104707171965806 36.101897768343434,62.53032118442828 C 21.757430161247363,77.95593519689076 21.188825793415774,89.39462275249713 5.806637385952627e-15,94.82958498720504 C -21.18882579341576,100.26454722191295 -28.282785694253935,96.21658359631788 -48.65340540531964,84.2701701232599 C -69.02402511638535,72.32375665020193 -76.25293174526105,68.11147362578814 -81.48247884426281,47.04393109497316 C -86.71202594326458,25.97638856415819 -70.78600764571006,22.820823387524214 -69.57159380132667,8.520062966037455e-15 C -68.35717995694328,-22.8208233875242 -83.86134430674426,-26.648000413200233 -76.62482346672927,-44.23936245512367 C -69.38830262671428,-61.8307244970471 -59.781716307949,-59.94968522832403 -40.625510441266684,-70.36544816769373 C -21.46930457458437,-80.78121110706343 -22.13344027979282,-82.74889518555668 -1.5780017490674058e-14,-85.90241421260248 C 22.13344027979279,-89.05593323964828 30.228896104913595,-94.24794770721236 47.90825067790453,-82.97952427587691 C 65.58760525089548,-71.71110084454146 63.59622076975027,-61.5736015562299 70.71741829196374,-40.828720487260675 C 77.83861581417722,-20.083839418291447 79.72792773265328,-18.48896235615395 76.39304076675842,0 Z" />
+        </clipPath>
+      </defs>
+
+      <!-- Imagen recortada con la forma del blob -->
+      <image
+        href="/src/assets/hero.png"
+        x="-100" y="-100"
+        width="200" height="200"
+        preserveAspectRatio="xMidYMid slice"
+        clip-path="url(#blobClip)"
+      />
+    </svg>
+
+  </div>
+
+
+
+
+
+              
+
+    </div>
+</div>

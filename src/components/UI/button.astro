@@ -1,0 +1,49 @@
+---
+interface ButtonProps {
+  text: string;
+  href: string;
+  style?: string;
+}
+
+const { text, href, style } = Astro.props as ButtonProps;
+---
+
+<a href={href} class="btn" style={style}>{text} <span class="arrow">↗</span></a>
+
+
+<style>
+.btn {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 30px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+</style>
