@@ -1,20 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import LaSolucion from "../components/LaSolucion.astro";
-import Footer from "../components/Footer.astro";
+// import Header from "../components/Header.astro";
+// import Hero from "../components/Hero.astro";
+// import LaSolucion from "../components/LaSolucion.astro";
+// import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
 ---
 
 <BaseLayout title="landing page" description="">
-  <Header links={[
+  <!-- <Header links={[
     { href: "/#la-solucion", label: "La Solución" },
     { href: "/#pricing", label: "Precios" },
     { href: "/#contact", label: "Contacto" }
-  ]} />
+  ]} /> -->
   <main >
-    <Hero/>
-<LaSolucion /> 
+    <!-- <Hero/>
+<LaSolucion />  -->
+<Pricing />
+
   </main>
-  <Footer compañia="lorem ipsum" telefono="123-456-7890" email="info@loremipsum.com" direccion="Calle Falsa 123, Ciudad, País" instagram="https://instagram.com/loremipsum" facebook="https://facebook.com/loremipsum" />
+  <!-- <Footer compañia="lorem ipsum" telefono="123-456-7890" email="info@loremipsum.com" direccion="Calle Falsa 123, Ciudad, País" instagram="https://instagram.com/loremipsum" facebook="https://facebook.com/loremipsum" /> -->
 </BaseLayout>
