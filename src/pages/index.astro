@@ -6,16 +6,15 @@ import LaSolucion from "../components/LaSolucion.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="" description="">
+<BaseLayout title="landing page" description="">
   <Header links={[
-    { href: "/feature", label: "Feature" },
-    { href: "/about", label: "About" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/contact", label: "Contact" }
+    { href: "/#la-solucion", label: "La Solución" },
+    { href: "/#pricing", label: "Precios" },
+    { href: "/#contact", label: "Contacto" }
   ]} />
   <main >
     <Hero/>
-<LaSolucion/> 
+<LaSolucion /> 
   </main>
-  <Footer />
+  <Footer compañia="lorem ipsum" telefono="123-456-7890" email="info@loremipsum.com" direccion="Calle Falsa 123, Ciudad, País" instagram="https://instagram.com/loremipsum" facebook="https://facebook.com/loremipsum" />
 </BaseLayout>
